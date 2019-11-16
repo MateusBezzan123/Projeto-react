@@ -4,7 +4,7 @@ const routes = require('./routes');
 
 
 const app = express();
-mongoose.connect('mongodb+srv://root:root@cluster0-crsxl.mongodb.net/test?retryWrites=true&w=majority',
+mongoose.connect('mongodb://root:root@cluster0-shard-00-00-crsxl.mongodb.net:27017,cluster0-shard-00-01-crsxl.mongodb.net:27017,cluster0-shard-00-02-crsxl.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
