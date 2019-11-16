@@ -5,8 +5,8 @@ const app = express();
 //GET,POST,PUT,DELETE
 //req.query = acessar query params
 
-app.get('/users', (req, res) => {
-  return res.json({ idade: req.query.idade });
+app.put('/users/:id', (req, res) => {
+  return res.json({ idade: req.params.id });
 
 });
 
