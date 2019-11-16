@@ -6,7 +6,7 @@ const app = express();
 //req.query = acessar query params
 
 app.put('/users/:id', (req, res) => {
-  return res.json({ idade: req.params.id });
+  return res.json({ id: req.params.id });
 
 });
 
