@@ -3,10 +3,10 @@ const express = require('express');
 const app = express();
 
 //GET,POST,PUT,DELETE
+//req.query = acessar query params
 
-
-app.post('/users', (req, res) => {
-  return res.json({ message: 'Hello World' });
+app.get('/users', (req, res) => {
+  return res.json({ idade: req.query.idade });
 
 });
 
