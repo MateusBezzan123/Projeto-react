@@ -3,10 +3,12 @@ const express = require('express');
 const app = express();
 
 //GET,POST,PUT,DELETE
-//req.query = acessar query params
+//req.query = acessar query params(para filtros)
+//req.params = Acessar route params (para edição,delete)
+//req.body = Acessar corpo da requisição(para criação,edição)
 
-app.put('/users/:id', (req, res) => {
-  return res.json({ id: req.params.id });
+app.post('/users', (req, res) => {
+  return res.json(req.body);
 
 });
 
